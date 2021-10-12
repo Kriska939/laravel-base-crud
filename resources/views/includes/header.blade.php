@@ -9,10 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item fancy">
-          <a class="nav-link active text-primary fw-bold" aria-current="page" href="#">Home</a>
+          <a class="nav-link fw-bold {{ request()->routeIs('home') ? 'active' : ''}}" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item fancy">
-          <a class="nav-link text-primary fw-bold" href="#">Comics</a>
+          <a class="nav-link fw-bold {{ request()->routeIs('comics.index') ? 'active' : ''}}" href="#">Comics</a>
         </li>
       </ul>
     </div>
