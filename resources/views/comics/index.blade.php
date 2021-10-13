@@ -17,10 +17,14 @@
     <tbody>
       @forelse($comics as $comic)
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>
+          @if ($comic->thumb)
+          <img src="{{ $comic->thumb}}" alt="{{ $comic->title}}" class="img-fluid me-2" width="20">
+          @endif
+          {{ $comic->title}}</td>
+        <td>{{ $comic->series}}</td>
+        <td>{{ $comic->price}}</td>
+        <td>{{ $comic->sale_date}}</td>
       </tr>
       @empty 
         <tr><td colspan="5" class="text-center">No results found</td></tr> 
