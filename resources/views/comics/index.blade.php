@@ -25,6 +25,7 @@
         <td>{{ $comic->series}}</td>
         <td>{{ $comic->price}}</td>
         <td>{{ $comic->sale_date}}</td>
+        <td><a class="btn btn-primary"href="{{ route('comics.show', $comic->id)}}">GO</a></td>
       </tr>
       @empty 
         <tr><td colspan="5" class="text-center">No results found</td></tr> 
