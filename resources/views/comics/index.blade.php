@@ -3,7 +3,9 @@
 @section('section-id', 'comics')
 
 @section('content')
-<h1 class="card-title text-primary fancy">Comics List</h1>
+<div class="card-title">
+  <h1 class="text-primary fancy">Comics List</h1>
+</div>
 <table class="table">
     <thead>
       <tr>
