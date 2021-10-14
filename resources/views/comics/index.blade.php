@@ -5,6 +5,7 @@
 @section('content')
 <div class="card-title">
   <h1 class="text-primary fancy">Comics List</h1>
+  <div class="d-flex flex-row-reverse"><a class="btn btn-success" href="{{ route('comics.create')}}">Add New</a></div>
 </div>
 <table class="table">
     <thead>

@@ -14,6 +14,9 @@
         <li class="nav-item fancy">
           <a class="nav-link fw-bold {{ request()->routeIs('comics.index') ? 'active' : ''}}" href="{{route('comics.index')}}">Comics</a>
         </li>
+        <li class="nav-item fancy">
+          <a class="nav-link fw-bold {{ request()->routeIs('comics.create') ? 'active' : ''}}" href="{{route('comics.create')}}">Add New</a>
+        </li>
       </ul>
     </div>
   </div>
