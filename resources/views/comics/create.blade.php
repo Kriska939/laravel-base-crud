@@ -11,7 +11,8 @@
     <hr>
 </div>
 <div class="card-body">
-<form action="">
+<form method="POST" action="{{route('comics.store')}}">
+    @csrf
     <div class="row">
         <div class="col-md-8">
             <div class="mb-3">
@@ -33,7 +34,7 @@
         </div>
         <div class="col-md-4">
             <div class="mb-3">
-                <label for="sale_date" class="form-label text-primary fancy"><strong>Publishing Date (YYYY/MM/DD)</strong></label>
+                <label for="sale_date" class="form-label text-primary fancy"><strong>Publishing Date (YYYY-MM-DD)</strong></label>
                 <input type="text" class="form-control" id="sale_date" name="sale_date">
               </div>
         </div>
@@ -51,8 +52,8 @@
         </div> 
     </div>
     <div class="card-footer bg-white d-flex justify-content-end pt-4">
-        <button type="reset" class="btn btn-success me-2">Add</button>
-        <button type="submit"class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-success me-2">Add</button>
+        <button type="reset"class="btn btn-secondary">Cancel</button>
     </div>
 </form>
 </div>
