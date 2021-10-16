@@ -28,8 +28,16 @@
         <td>{{ $comic->series}}</td>
         <td>{{ $comic->price}}</td>
         <td>{{ $comic->sale_date}}</td>
-        <td><a class="btn btn-primary me-2"href="{{ route('comics.show', $comic->id)}}">GO</a>
-          <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id)}}">EDIT</a></td>
+        <td class="d-flex justify-content-end border-0 mt-2"><a class="btn btn-primary"href="{{ route('comics.show', $comic->id)}}">GO</a>
+          <a class="btn btn-warning ms-2" href="{{ route('comics.edit', $comic->id)}}">EDIT</a>
+          <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger ms-2" type="submit">DELETE</button>
+          </form>
+        
+        </td>
+
       </tr>
       @empty 
         <tr><td colspan="5" class="text-center">No results found</td></tr> 
