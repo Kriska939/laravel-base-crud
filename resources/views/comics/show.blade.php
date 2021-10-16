@@ -21,7 +21,8 @@
     </div>
 </div>
 <div class="card-footer bg-white d-flex justify-content-end">
-    <a class="btn btn-primary"href="{{ route('comics.index')}}">BACK</a>
+    <a class="btn btn-primary me-2" href="{{ url()->previous()}}">BACK</a>
+    <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id)}}">EDIT</a>
 </div>
 
 @endsection
